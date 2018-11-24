@@ -1,3 +1,4 @@
+```dart
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_image_media/image_album.dart';
@@ -37,3 +38,4 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+```
