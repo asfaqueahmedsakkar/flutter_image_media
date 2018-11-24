@@ -1,8 +1,8 @@
 name: flutter_image_media
 description: A new Flutter plugin for getting image list from the phone
 version: 0.0.1
-author:
-homepage:
+author: Asfaque Ahmed
+homepage: https://github.com/RiabSlow/flutter_image_media
 
 environment:
   sdk: ">=2.0.0-dev.68.0"
