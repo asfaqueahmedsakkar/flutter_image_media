@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_image_media/ImageAlbum.dart';
+import 'package:flutter_image_media/image_album.dart';
 import 'package:flutter_image_media/flutter_image_media.dart';
+import 'package:flutter_image_media/image_album_with_thumbnail.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,9 +25,19 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> showAllImages() async {
-    List<ImageAlbum> images = await FlutterImageMedia.getImages;
-    for (ImageAlbum imageAlbum in images) {
-      print(imageAlbum.folderName);
+    List<ImageAlbumWithThumbnail> images =
+        await FlutterImageMedia.getAllImagesWithMiniThumbnail;
+
+    print(images.length);
+
+    for (ImageAlbumWithThumbnail imageAlbum in images) {
+      print(
+          "${imageAlbum.folderName} ${imageAlbum.imagePaths.length} ${imageAlbum.thumbnailPaths.length}");
+    }
+    List<ImageAlbum> images1 = await FlutterImageMedia.getImages;
+
+    for (ImageAlbum imageAlbum in images1) {
+      print("${imageAlbum.folderName} ${imageAlbum.imagePaths.length} ");
     }
   }
 

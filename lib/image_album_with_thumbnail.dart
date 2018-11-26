@@ -1,16 +1,21 @@
-class ImageAlbum {
+class ImageAlbumWithThumbnail {
   String _folderName;
   List<String> _imagePaths;
+  List<String> _thumbnailPaths;
 
-  ImageAlbum(this._folderName, this._imagePaths);
+  ImageAlbumWithThumbnail(this._folderName, this._imagePaths);
 
-  ImageAlbum.fromJSON(Map<String, dynamic> json) {
+  ImageAlbumWithThumbnail.fromJSON(Map<String, dynamic> json) {
     _folderName = json['folder'];
     List<dynamic> list = json['images'];
     _imagePaths = list.map((data) => data as String).toList();
+    list = json['thumbnails'];
+    _thumbnailPaths = list.map((data) => data as String).toList();
   }
 
   List<String> get imagePaths => _imagePaths;
 
   String get folderName => _folderName;
+
+  List<String> get thumbnailPaths => _thumbnailPaths;
 }
