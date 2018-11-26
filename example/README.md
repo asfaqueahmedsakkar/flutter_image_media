@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_image_media/image_album.dart';
 import 'package:flutter_image_media/flutter_image_media.dart';
+<<<<<<< HEAD
 import 'package:flutter_image_media/image_album_with_thumbnail.dart';
+=======
+>>>>>>> bee91dc67295aa11a5bcd5b63250b05bf81c439d
 
 void main() => runApp(MyApp());
 
@@ -18,6 +21,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+<<<<<<< HEAD
   }
 
   Future<void> getAllImagesWithThumbnail() async {
@@ -30,6 +34,12 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> getAllImages() async {
+=======
+    showAllImages();
+  }
+
+  Future<void> showAllImages() async {
+>>>>>>> bee91dc67295aa11a5bcd5b63250b05bf81c439d
     List<ImageAlbum> images = await FlutterImageMedia.getImages;
     for (ImageAlbum imageAlbum in images) {
       print(imageAlbum.folderName);
