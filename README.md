@@ -8,7 +8,6 @@ To use import
  ```dart
   import 'package:flutter_image_media/flutter_image_media.dart';
 ```
-<<<<<<< HEAD
 
 To get the list of ImageAlbum 
  ```dart
@@ -37,8 +36,6 @@ this can be assesed using
   List<String> thumbnailPaths=imageAlbum.thumbnailPaths;
 ```
 
-=======
-
 To get the list of ImageAlbum 
  ```dart
   Liat<ImageAlbum> imageAlbums=FlutterImageMedia.getImages;
@@ -51,4 +48,3 @@ this can be assesed using
   String album=imageAlbum.folderName;
   List<String> imagePaths=imageAlbum._imagePaths;
 ```
->>>>>>> bee91dc67295aa11a5bcd5b63250b05bf81c439d
